@@ -1,0 +1,31 @@
+
+
+<body>
+  <div class="anime-background">
+  <div class="anime-prediction-container">
+    <h1 class="title">¡Predictor de Popularidad de Anime!</h1>
+    <form (ngSubmit)="predict()" class="anime-form">
+      <label for="episodes">Episodios:</label>
+      <input type="number" [(ngModel)]="episodes" name="episodes" id="episodes" />
+  
+      <label for="members">Miembros:</label>
+      <input type="number" [(ngModel)]="members" name="members" id="members" />
+  
+      <label for="score">Puntuación:</label>
+      <input type="number" [(ngModel)]="score" name="score" id="score" />
+
+      <label for="ranked">Clasificacion</label>
+      <input type="number" [(ngModel)]="ranked" name="ranked" id="ranked"/>
+  
+      <button type="submit">Predecir</button>
+    </form>
+  
+    <div *ngIf="predictedPopularity !== undefined" class="prediction-result">
+      <p>Popularidad predicha: {{ predictedPopularity }}</p>
+      <p>Rango de popularidad: {{ popularityLabel }}</p>
+    </div>
+  </div>
+  </div>
+</body>
+
+

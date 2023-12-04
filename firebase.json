@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/animes_ml",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
